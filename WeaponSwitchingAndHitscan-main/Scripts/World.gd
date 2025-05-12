@@ -37,11 +37,11 @@ func _get_random_child(parent_node):
 
 func _on_zombie_spawn_timer_timeout():
 	var spawn_point = _get_random_child(spawns).global_position
-	instance = zombie.instantiate()
-	instance.position = spawn_point
-	instance.visible = false
-	instance.zombie_hit.connect(_on_enemy_hit)
-	navigation_region.add_child(instance)
+	#instance = zombie.instantiate()
+	#instance.position = spawn_point
+	#instance.visible = false
+	#instance.zombie_hit.connect(_on_enemy_hit)
+	#navigation_region.add_child(instance)
 
 
 func _on_enemy_hit():

@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://5iurrb07epis"]
+[gd_scene load_steps=11 format=3 uid="uid://5iurrb07epis"]
 
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_ueh2c"]
+[ext_resource type="Script" uid="uid://dny6baodtj3c6" path="res://Scripts/Player.gd" id="1_ueh2c"]
 [ext_resource type="PackedScene" uid="uid://bqpwh2qhltcpn" path="res://Scenes/Rifle.tscn" id="2_kpw2n"]
 [ext_resource type="PackedScene" uid="uid://cvxonb5tocae2" path="res://Scenes/SteampunkAuto.tscn" id="2_nwejs"]
+[ext_resource type="Material" uid="uid://dwyv2ynaapj5g" path="res://Materials/Greenreal.tres" id="4_q7lqt"]
+[ext_resource type="ArrayMesh" uid="uid://clmlbvfgch70c" path="res://Models/untitled.obj" id="5_621fu"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xc2g5"]
 
@@ -92,8 +94,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_smhxs"]
 _data = {
-"LowerAuto": SubResource("Animation_fby5b"),
-"LowerPistols": SubResource("Animation_0xmlf")
+&"LowerAuto": SubResource("Animation_fby5b"),
+&"LowerPistols": SubResource("Animation_0xmlf")
 }
 
 [node name="Player" type="CharacterBody3D"]
@@ -119,6 +121,7 @@ current = true
 
 [node name="SteampunkAuto" parent="Head/Camera3D" instance=ExtResource("2_nwejs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, -0.28, -0.38)
+visible = false
 
 [node name="Rifle" parent="Head/Camera3D" instance=ExtResource("2_kpw2n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -1, -0.543)
@@ -131,7 +134,7 @@ visible = false
 [node name="AimRay" type="RayCast3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 target_position = Vector3(0, 0, -100)
-collision_mask = 2
+collision_mask = 3
 collide_with_areas = true
 
 [node name="AimRayEnd" type="Node3D" parent="Head/Camera3D"]
@@ -139,5 +142,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -101.5)
 
 [node name="WeaponSwitching" type="AnimationPlayer" parent="Head/Camera3D"]
 libraries = {
-"": SubResource("AnimationLibrary_smhxs")
+&"": SubResource("AnimationLibrary_smhxs")
 }
+
+[node name="Untitled" type="MeshInstance3D" parent="Head/Camera3D"]
+transform = Transform3D(0.233148, -6.62647e-15, 1.05316e-22, -6.35629e-42, -1.01912e-08, 0.233148, -6.62647e-15, -0.233148, -1.01912e-08, 0.261295, -0.0310386, -0.289767)
+material_override = ExtResource("4_q7lqt")
+mesh = ExtResource("5_621fu")
+skeleton = NodePath("../../..")

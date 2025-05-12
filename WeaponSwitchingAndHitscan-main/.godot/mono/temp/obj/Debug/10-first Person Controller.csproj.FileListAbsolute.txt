@@ -1,0 +1,26 @@
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\10-first Person Controller.csproj.AssemblyReference.cache
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\10-first Person Controller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\10-first Person Controller.AssemblyInfoInputs.cache
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\10-first Person Controller.AssemblyInfo.cs
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\10-first Person Controller.csproj.CoreCompileInputs.cache
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\10-first Person Controller.sourcelink.json
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\10-first Person Controller.deps.json
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\10-first Person Controller.runtimeconfig.json
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\10-first Person Controller.dll
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\10-first Person Controller.pdb
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\System.IO.Ports.dll
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\10-first.2768F2B4.Up2Date
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\10-first Person Controller.dll
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\refint\10-first Person Controller.dll
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\10-first Person Controller.pdb
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\10-first Person Controller.genruntimeconfig.cache
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\obj\Debug\ref\10-first Person Controller.dll
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\runtimes\unix\lib\net7.0\System.IO.Ports.dll
+C:\Users\check\OneDrive\Documents\GitHub\Not_A_Gun\WeaponSwitchingAndHitscan-main\.godot\mono\temp\bin\Debug\runtimes\win\lib\net7.0\System.IO.Ports.dll

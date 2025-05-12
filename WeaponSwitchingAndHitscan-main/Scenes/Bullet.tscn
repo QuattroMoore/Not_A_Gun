@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://yn400ram7bxt"]
 
-[ext_resource type="Script" path="res://Scripts/Bullet.gd" id="1_lc6tw"]
+[ext_resource type="Script" uid="uid://bdwjemtgww2o7" path="res://Scripts/Bullet.gd" id="1_lc6tw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_m767h"]
 size = Vector3(0.05, 0.05, 1)
@@ -22,7 +22,7 @@ grow = true
 grow_amount = 0.01
 
 [sub_resource type="Curve" id="Curve_661dr"]
-max_value = 1.5
+_limits = [0.0, 1.5, 0.0, 1.0]
 _data = [Vector2(0, 0.642105), 0.0, 0.0, 0, 0, Vector2(0.21123, 1.23158), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
@@ -57,9 +57,9 @@ emission_shape = 1
 emission_sphere_radius = 0.1
 direction = Vector3(0, 0, -1)
 spread = 10.0
-gravity = Vector3(0, 0.5, 0)
 initial_velocity_min = 1.0
 initial_velocity_max = 2.0
+gravity = Vector3(0, 0.5, 0)
 scale_min = 0.5
 scale_curve = SubResource("CurveTexture_jouu8")
 
@@ -74,9 +74,11 @@ material = SubResource("StandardMaterial3D_e50nl")
 size = Vector3(0.02, 0.02, 0.02)
 
 [node name="Bullet" type="Node3D"]
+visible = false
 script = ExtResource("1_lc6tw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transparency = 1.0
 cast_shadow = 0
 mesh = SubResource("BoxMesh_m767h")
 surface_material_override/0 = SubResource("StandardMaterial3D_look2")

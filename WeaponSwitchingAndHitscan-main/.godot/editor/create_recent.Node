@@ -1,4 +1,8 @@
+RichTextLabel
 ColorRect
+StaticBody3D
+CollisionShape3D
+RigidBody3D
 AnimationPlayer
 GPUParticles3D
 Node3D
@@ -9,16 +13,3 @@ TextureRect
 OmniLight3D
 DirectionalLight3D
 Camera3D
-Area3D
-CollisionShape3D
-BoneAttachment3D
-StaticBody3D
-Control
-AnimationTree
-NavigationRegion3D
-NavigationAgent3D
-CharacterBody3D
-SimpleGrassTextured
-CSGSphere3D
-CSGBox3D
-AnimatedSprite3D

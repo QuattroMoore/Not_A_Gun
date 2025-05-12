@@ -27,6 +27,15 @@ var bullet = load("res://Scenes/Bullet.tscn")
 var bullet_trail = load("res://Scenes/BulletTrail.tscn")
 var instance
 
+var my_csharp_node
+var triggerDownLastFrame = false;
+
+var calibX = 0.0
+var calibY = 0.0
+var calibZ = 0.0
+
+var score = 0
+
 # Weapon switching
 enum weapons {
 	AUTO,
@@ -53,20 +62,23 @@ var can_shoot = true
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	var TrackerScript = load("res://Scripts/trackerInterface.cs")
+	my_csharp_node = TrackerScript.new()
+	my_csharp_node._Ready()
 
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
-		head.rotate_y(-event.relative.x * SENSITIVITY)
-		camera.rotate_x(-event.relative.y * SENSITIVITY)
+		#head.rotate_y(-event.relative.x * SENSITIVITY)
+		#camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-70), deg_to_rad(70))
 
 
 func _physics_process(delta):
+	print(delta)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -76,6 +88,12 @@ func _physics_process(delta):
 		speed = SPRINT_SPEED
 	else:
 		speed = WALK_SPEED
+	my_csharp_node._Process(0);
+	camera.rotation.x = deg_to_rad(-(my_csharp_node.y + calibY));
+	camera.rotation.y = deg_to_rad(my_csharp_node.z + calibZ);
+	camera.rotation.z = deg_to_rad(-(my_csharp_node.x + calibX));
+	print(my_csharp_node.x)
+	print(my_csharp_node.y)
 
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("left", "right", "up", "down")
@@ -99,14 +117,21 @@ func _physics_process(delta):
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
-	
+	print(my_csharp_node.triggerDown)
 	# Shooting
-	if Input.is_action_pressed("shoot") and can_shoot:
+	if my_csharp_node.triggerDown and !triggerDownLastFrame:
 		match weapon:
 			weapons.AUTO:
 				_shoot_auto()
 			weapons.PISTOLS:
 				_shoot_pistols()
+	triggerDownLastFrame = my_csharp_node.triggerDown;
+	
+	if Input.is_action_pressed("shoot") or Input.is_action_pressed("up"):
+		my_csharp_node.ReOpenTrigger()
+		calibX = -my_csharp_node.x
+		calibY = -my_csharp_node.y
+		calibZ = -my_csharp_node.z
 	
 	# Weapon Switching
 	if Input.is_action_just_pressed("weapon_one") and weapon != weapons.AUTO:
@@ -159,8 +184,8 @@ func _shoot_auto():
 		if aim_ray.is_colliding():
 			instance.init(auto_barrel.global_position, aim_ray.get_collision_point())
 			get_parent().add_child(instance)
-			if aim_ray.get_collider().is_in_group("enemy"):
-				aim_ray.get_collider().hit()
+			if aim_ray.get_collider().is_in_group("target"):
+				#aim_ray.get_collider().hit()
 				instance.trigger_particles(aim_ray.get_collision_point(),
 											auto_barrel.global_position, true)
 			else:
@@ -190,4 +215,3 @@ func _raise_weapon(new_weapon):
 			weapon_switching.play_backwards("LowerPistols")
 	weapon = new_weapon
 	can_shoot = true
-
